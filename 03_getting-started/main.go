@@ -24,9 +24,9 @@ func main() {
 	}
 
 	// Printf vs Println
-	// Printf formats and prints the string and replaces the placeholders with the values passed
+	// Printf formats, replaces the placeholders with the values passed and prints the string
 	// Println prints the string with a new line at the end
-	fmt.Printf("Hello, %s! You scored %d points.\nCongratulation %[1]v! \n", "Shivam", 100)
+	fmt.Printf("Hello, %s! You scored %d (%[2]T) points.\nCongratulation %[1]v! \n", "Shivam", 100)
 
 	// 	CONSTANTS
 	// 	constants are declared using the const keyword
@@ -37,17 +37,15 @@ func main() {
 	// pi = 3.14159 // error: cannot assign to pi
 
 	// IOTA
-	// iota is a predeclared identifier representing the untyped integer
-	// ordinal number of the current const specification in a (usually parenthesized) const declaration.
+	// iota is a way to create a sequence of related constants incrementally, used to create enumerated constants
+	//	- iota is reset to 0 whenever the word const appears in the source code
 	// It is zero-indexed.
 	const (
-		_  = iota // 0
-		KB        // 1
-		MB        // 2
-		GB        // 3
-		TB        // 4
-		PB        // 5
+		_  = 1 << (iota * 10) //  values can be skipped using _
+		KB                    // decimal: 1024 bytes
+		MB                    // decimal: 1048576 bytes
+		GB                    // decimal: 1073741824 bytes
 	)
-	fmt.Println(KB, MB, GB, TB, PB)
+	fmt.Println(KB, MB, GB)
 
 }

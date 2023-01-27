@@ -13,9 +13,10 @@ func main() {
 		`<h1>Hello<h1>,
 \n \n	<h2>Go!<h2> Path: C:\Users\Documents\go` // raw string literal: multiline, not interpreted (no escape sequences)
 	fmt.Println(literal1, literal2)
+	// raw string literals are useful for writing HTML, XML, JSON, SQL, etc.
 
 	// STRING LENGTH
-	// len returns the number of bytes in a string, works fine for ASCII
+	// len (built in function, no need for any import) returns the number of bytes in a string, works fine for ASCII
 	// but not for UTF-8, use utf8.RuneCountInString() instead
 	unicdoeName := "शिवम"
 	fmt.Println(len(literal1), len(unicdoeName), utf8.RuneCountInString(unicdoeName))
