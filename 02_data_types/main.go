@@ -10,6 +10,9 @@ func main() {
 	// zero value for arrays & structs is the zero value of each field & element respectively
 	// zero value for user defined types is the zero value of the underlying type
 
+	//	Go Data Types: uint, uint8, uint16, uint32, uint64, int8, int16, int32, int64, float32, float64,
+	// complex64, complex128, bool, byte, rune, string, error, uintptr
+
 	// integer types
 	var i int
 	var i8 int8

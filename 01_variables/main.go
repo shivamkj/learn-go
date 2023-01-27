@@ -15,11 +15,12 @@ func main() {
 	// 		3. name := expression	// short declaration
 	fmt.Println(toplevel)
 
-	var speed int       // DECLARATION: declare a variable
-	fmt.Println(speed)  // print 0 (zero value, as not initialized)
-	speed = 100         // INITIALISATION: assign a value to the variable
-	var distance = 1000 // DECLARATION & INITIALISATION: declare and initialize a variable
-	fmt.Println(speed, distance)
+	var speed int                        // DECLARATION: declare a variable
+	fmt.Println(speed)                   // print 0 (zero value, as not initialized)
+	speed = 100                          // INITIALISATION: assign a value to the variable
+	var distance = 1000                  // DECLARATION & INITIALISATION: declare and initialize a variable
+	speed, distance, time := 50, 500, 10 // REDECLARATION & REASSIGNMENT
+	fmt.Println(speed, distance, time)
 
 	var force, power float64 // declare multiple variables
 	force, power = 1.5, 2.5  // assign multiple values to multiple variables
@@ -57,7 +58,6 @@ func main() {
 	// 4. Variable names are case-sensitive (age, Age and AGE are three different variables)
 	// 5. A variable cannot be declared more than once in the same scope
 	// 6. A variable cannot be declared with a reserved keyword, functions, identifiers (package, func, var, int, string, bool, etc.)
-	//	- , float64, bool, string, complex64, complex128, byte, rune, error, uint, uint8, uint16, uint32, uint64, int8, int16, int32, int64, float32, float64, complex64, complex128, bool, byte, rune, string, error, uintptr
 	// Some Examples of invalid Names: 3make, !happy, len, func, package, int
 
 	// var testing int = 100 // ERROR: go does not allow unused variables
