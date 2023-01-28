@@ -6,9 +6,10 @@ func main() {
 	// ZERO VALUE
 	// if variables are declared but not initialized, they are assigned the zero value
 	// zero value for int is 0, for string is "", for bool is false, for float is 0.0
-	// zero value for pointers, functions, interfaces, slices, channels, maps is nil
 	// zero value for arrays & structs is the zero value of each field & element respectively
 	// zero value for user defined types is the zero value of the underlying type
+
+	// nil is a predeclared identifier representing the zero value for pointers, functions, interfaces, slices, channels, maps
 
 	//	Go Data Types: uint, uint8, uint16, uint32, uint64, int8, int16, int32, int64, float32, float64,
 	// complex64, complex128, bool, byte, rune, string, error, uintptr

@@ -50,6 +50,26 @@ func main() {
 	var condition1, condition2 bool = true, false
 	condition1, condition2 = condition2, condition1
 
+	// 	CONSTANTS
+	// 	constants are declared using the const keyword
+	// 	constants can be character, string, boolean or numeric values
+	// 	cannot be declared using the := syntax
+	const pi = 3.14
+	const e = 2.71828
+	// pi = 3.14159 // error: cannot assign to pi
+
+	// IOTA
+	// iota is a way to create a sequence of related constants incrementally, usually to create enumerated constants
+	//	- iota is reset to 0 whenever the word const appears in the source code
+	// It is zero-indexed.
+	const (
+		_  = 1 << (iota * 10) //  values can be skipped using _
+		KB                    // decimal: 1024 bytes
+		MB                    // decimal: 1048576 bytes
+		GB                    // decimal: 1073741824 bytes
+	)
+	fmt.Println(KB, MB, GB)
+
 	// VARIABLE DECLARATION RULES
 	// 1. A variable must be declared before it is used with a unique name
 	// 2. Must start with a letter or an underscore & can't start with a number
