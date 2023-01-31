@@ -57,7 +57,7 @@ func main() {
 	// variables declared by the statement are only in scope until the end of the switch
 
 	// FALLTHROUGH
-	// fallthrough keyword is used to execute the next case block without checking the next case condition (used in-frequently)
+	// fallthrough keyword is used to execute the next case block without checking the next case condition
 	// used to execute multiple case blocks without checking the condition, should be used at the end of the case block
 
 	switch score, category := 122, "general"; { // default switch condition is true
