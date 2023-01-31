@@ -44,7 +44,7 @@ func main() {
 	for i := 0; i < len(topCities); i++ { // using for loop
 		fmt.Println(i, topCities[i])
 	}
-	// SYNTAX for index (current index element), value (current index value, optional) := range (keyword) collection {}
+	// SYNTAX: for index (current index element), value (current index value, optional) := range (keyword) collection {}
 	for index, value := range topCities { // using range (recommended, index can be ignored by using _)
 		fmt.Println(index, value) //
 	}

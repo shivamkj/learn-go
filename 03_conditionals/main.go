@@ -43,7 +43,7 @@ func main() {
 		fmt.Println(comment)
 	case 60: // each case condition should be unique
 		grade = "A"
-		break // break is optional in Go
+		break // break is optional in Go, as it is added by default
 	case 50: // type of switch condition is int, so case should be same type as well (int)
 		grade = "B"
 	default: // default case is optional & not necessary to be at the end, only one default case is allowed

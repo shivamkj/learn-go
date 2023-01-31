@@ -11,7 +11,7 @@ func main() {
 	literal1 := "Hello, Go! stored in C:\\Users\\Documents\\go \n" // string literal: single line, interpreted
 	literal2 :=
 		`<h1>Hello<h1>,
-\n \n	<h2>Go!<h2> Path: C:\Users\Documents\go` // raw string literal: multiline, not interpreted (no escape sequences)
+\n \n	<h2>Go!<h2> Path: C:\Users\Documents\go` // raw string literal: multiline, not interpreted (no escape sequence processing)
 	fmt.Println(literal1, literal2)
 	// raw string literals are useful for writing HTML, XML, JSON, SQL, etc.
 

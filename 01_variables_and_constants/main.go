@@ -10,9 +10,9 @@ var toplevel = "Hello, playground" // declare a variable at the package level
 
 func main() {
 	// 3 ways to declare a variable
-	// 		1. var name type = expression 	// type is explicitly specified
-	// 		2. var name = expression 	// type is inferred from the expression, can't be used without initialization
-	// 		3. name := expression	// short declaration
+	//  1. var name type = expression   | type is explicitly specified
+	//  2. var name = expression 	    | type is inferred from the expression
+	//  3. name := expression	        | short declaration
 	fmt.Println(toplevel)
 
 	var speed int                        // DECLARATION: declare a variable
@@ -26,10 +26,11 @@ func main() {
 	force, power = 1.5, 2.5  // assign multiple values to multiple variables
 	fmt.Println(force, power)
 
-	var direaction string = "left" // declare and initialize a variable
-	fmt.Println(direaction)
+	var direction string = "left" // declare and initialize a variable
+	fmt.Println(direction)
 
-	one, two := 1, 2 // declare with short declaration and initialize two variables
+	one, two := 1, 2    // declare with short declaration and initialize two variables
+	one, two = two, one // swap the values of two variables
 	fmt.Println(one, two)
 
 	_, path := path.Split("css/main.css") // use the blank identifier to ignore the first return value
@@ -46,14 +47,9 @@ func main() {
 	)
 	fmt.Println(न, age, height, weight, address)
 
-	// SWAPPING two variables
-	var condition1, condition2 bool = true, false
-	condition1, condition2 = condition2, condition1
-
 	// 	CONSTANTS
-	// 	constants are declared using the const keyword
+	// 	constants are declared using the const keyword, doesn't support := syntax
 	// 	constants can be character, string, boolean or numeric values
-	// 	cannot be declared using the := syntax
 	const pi = 3.14
 	const e = 2.71828
 	// pi = 3.14159 // error: cannot assign to pi
