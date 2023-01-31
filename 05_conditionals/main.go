@@ -26,10 +26,10 @@ func main() {
 	// SHORT HAND IF STATEMENT
 	// if statement can start with a short statement to execute before the condition
 	// variables declared by the statement are only in scope until the end of the if
-	if ramScore := 120; ramScore > 100 {
+	if ramScoreInner := 120; ramScoreInner > 100 {
 		fmt.Println("Ram has scored more than 100!")
 	}
-	// fmt.Println(ramScore) // this will throw an error as ramScore is not in scope
+	// fmt.Println(ramScoreInner) // this will throw an error as ramScoreInner is not in scope
 
 	// SWITCH STATEMENT
 	// switch statement is a shorter way to write a sequence of if-else statements
@@ -52,13 +52,25 @@ func main() {
 	// fmt.Println("Comment", comment) // this will throw an error as comment is not in scope
 	fmt.Println("Ram's grade is", grade)
 
-	switch { // default switch condition is true
-	case ramScore > 90: // boolean expression can be used in a case
-	case ramScore > 80: // multiple cases can be provided for the same block
-		fmt.Println("Ram scored A+")
-	case ramScore > 60:
-		fmt.Println("Ram scored A grade")
+	// SHORT SWITCH STATEMENT
+	// switch statement can start with a short statement to execute before the condition
+	// variables declared by the statement are only in scope until the end of the switch
+
+	// FALLTHROUGH
+	// fallthrough keyword is used to execute the next case block without checking the next case condition (used in-frequently)
+	// used to execute multiple case blocks without checking the condition, should be used at the end of the case block
+
+	switch score, category := 122, "general"; { // default switch condition is true
+	case score > 120 && category == "general": // boolean expression can be used in a case
+		fallthrough
+	case score > 80 && category == "pwd":
+		fmt.Println("You are qualified for the next round!")
+	case score > 100 && category == "general":
+		fallthrough
+	case score > 60 && category == "pwd":
+		fmt.Println("You need to appear for improvement exam!")
 	default:
-		fmt.Println("Ram scored B grade")
+		fmt.Println("You are not disqualified!")
 	}
+
 }

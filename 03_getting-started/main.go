@@ -3,13 +3,14 @@ package main
 import (
 	"fmt"
 	"os"
+	"time"
 )
 
 func main() {
 	// TYPE CONVERSION syntax: T(v) [type(value)]
 	var distance int = 100
-	var time float64 = 25.5
-	var speed float64 = float64(distance) / time
+	var timer float64 = 25.5
+	var speed float64 = float64(distance) / timer
 	fmt.Println(speed)
 	score := 100
 	var increase = 5.5
@@ -37,4 +38,7 @@ func main() {
 	// Println prints the string with a new line at the end
 	fmt.Printf("Hello, %s! You scored %d (%[2]T) points.\nCongratulation %[1]v! \n", "Shivam", 100)
 
+	// TIME PACKAGE
+	// provides functions to get the current time, parse time, format time, etc.
+	fmt.Println("Today is", time.Now().Weekday())
 }
